@@ -18,7 +18,8 @@ class CompanyController extends Controller
     public function create(){
         return view('company/companyAdd');
     }
-    public function store(Request $req): RedirectResponse{
+    public function store(Request $req): RedirectResponse
+    {
         Company::create($req->validate([
             'name'=>'required',
             'email'=>'required|unique:companies',
@@ -28,5 +29,22 @@ class CompanyController extends Controller
 
         return redirect()->route('index')
                 ->withSuccess('New product is added successfully.');
+    }
+    public function edit(Company $company) : View
+    {
+        return view('company/companyEdit', compact('company'));
+    }
+
+    public function update(Request $req, Company $company) : RedirectResponse
+    {
+        $company->update($req->validate([
+            'name'=>'required',
+            'email'=>'required|unique:companies',
+            'logo'=>'',
+            'link'=>'required',
+        ]));
+
+        return redirect()->route('index')
+                ->withSuccess('company is updated successfully.');
     }
 }

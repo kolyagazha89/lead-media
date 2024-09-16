@@ -19,6 +19,8 @@ use App\Http\Controllers\CompanyController;
 Route::get('/company', [CompanyController::class,'index'])->name("index");
 Route::get('/company/add', [CompanyController::class,'create'])->name("createFormCompany");
 Route::post('/company/add', [CompanyController::class,'store'])->name("addCompany");
+Route::get('/company/update/{company}', [CompanyController::class,'edit'])->name("editFormCompany");
+Route::post('/company/update/{company}', [CompanyController::class,'update'])->name("editCompany");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
