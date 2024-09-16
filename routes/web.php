@@ -17,6 +17,7 @@ use App\Http\Controllers\CompanyController;
 
 
 Route::get('/company', [CompanyController::class,'index'])->name("index");
+Route::get('/company/show/{company}', [CompanyController::class,'show'])->name("showCompany");
 Route::get('/company/add', [CompanyController::class,'create'])->name("createFormCompany");
 Route::post('/company/add', [CompanyController::class,'store'])->name("addCompany");
 Route::get('/company/update/{company}', [CompanyController::class,'edit'])->name("editFormCompany");

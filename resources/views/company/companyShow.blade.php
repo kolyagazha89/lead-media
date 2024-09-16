@@ -9,21 +9,21 @@
     <body >
         <div class='main'>
           <div class="header">
-            <div class="header_text">Компании</div>
+            <div class="header_text">{{$company->name}}</div>
             <a href='{{ route("createFormCompany")}}' class="header_btn">
-              <div class="header_btn_text">Добавить компанию</div>
+              <div class="header_btn_text">Добавить сотрудника</div>
             </a>
           </div>
           <div class="line"></div>
           <div class="table">
-            <div class="table_zag">Название</div>
+            <div class="table_zag">Имя</div>
+            <div class="table_zag">Фамилия</div>
             <div class="table_zag">Email</div>
-            <div class="table_zag">Логотип</div>
-            <div class="table_zag">Адрес сайта</div>
+            <div class="table_zag">Номер телефона</div>
           </div>
           <div class="table_data">
-          @forelse ($companies as $company)
-              <div class="row">
+          {{--@forelse ($companies as $company)
+               <div class="row">
                 <div class="row_data">{{$company->name}}</div>
                 <div class="row_data">{{$company->email}}</div>
                 <div class="row_data">{{$company->logo}}</div>
@@ -52,7 +52,8 @@
                 </div>
               </div>
           @empty
-          @endforelse
+          <div>пусто</div>
+          @endforelse --}}
           </div>
         </div>
     </body>

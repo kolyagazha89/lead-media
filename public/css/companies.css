@@ -18,7 +18,7 @@
     word-wrap: break-word
 }
 .header_btn{
-    width: 150px;
+    width: 200px;
     height: 24px;
     padding: 13px 26px;
     background: #FEAF00;
@@ -76,7 +76,7 @@
 .data_operation{
     display: inline-flex;
     gap:10px;
-    width: 50px;
+    width: 80px;
 }
 .icon{
     width: 20px;

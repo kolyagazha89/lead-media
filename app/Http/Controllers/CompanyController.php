@@ -18,6 +18,10 @@ class CompanyController extends Controller
     public function create(){
         return view('company/companyAdd');
     }
+    public function show(Company $company) : View
+    {
+        return view('company/companyShow', compact('company'));
+    }
     public function store(Request $req): RedirectResponse
     {
         Company::create($req->validate([
