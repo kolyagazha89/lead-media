@@ -27,8 +27,7 @@ class CompanyController extends Controller
             'link'=>'required',
         ]));
 
-        return redirect()->route('index')
-                ->withSuccess('New product is added successfully.');
+        return redirect()->route('index');
     }
     public function edit(Company $company) : View
     {
@@ -44,7 +43,12 @@ class CompanyController extends Controller
             'link'=>'required',
         ]));
 
-        return redirect()->route('index')
-                ->withSuccess('company is updated successfully.');
+        return redirect()->route('index');
     }
+    public function destroy(Company $company) : RedirectResponse
+        {
+            $company->delete();
+
+            return redirect()->route('index');
+        }
 }
