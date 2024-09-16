@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class company extends Model
 {
     use HasFactory;
+    protected $table='companies';
     public $fillable=[
-        'id',
         'name',
         'email',
         'logo',
         'link'
-    ]
+    ];
 }

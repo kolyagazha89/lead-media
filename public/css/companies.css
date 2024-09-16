@@ -1,0 +1,79 @@
+.main{
+    width: 1110px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto
+}
+.header{
+    width: 1101px;
+    height: 44px;
+    justify-content: space-between;
+    align-items: center;
+    display: inline-flex
+}
+.header_text{
+    color: black;
+    font-size: 22px;
+    font-weight: 700;
+    word-wrap: break-word
+}
+.header_btn{
+    width: 150px;
+    height: 24px;
+    padding: 13px 26px;
+    background: #FEAF00;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex
+}
+.header_btn_text{
+    color: white;
+    font-size: 16px;
+}
+.line{
+    width: 1110px;
+    border: 1px #E5E5E5 solid;
+    display: flex;
+    margin-top: 10px;
+}
+.table{
+    width: 1110px;
+    height: 15px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap:100px;
+    padding: 5px 5px;
+    margin-top: 20px;
+}
+.table_zag{
+    color: #ACACAC;
+    font-size: 16px;
+    font-weight: 600;
+    width: 150px;
+}
+.table_data{
+    display: flex;
+    width: 1110px;
+    flex-wrap: wrap;
+}
+.row{
+    width: 1110px;
+    padding: 5px 5px;
+    display: inline-flex;
+    gap:100px;
+    margin-top: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.row_data{
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    width: 150px;
+}
+.data_operation{
+    display: inline-flex;
+    gap:10px;
+    width: 50px;
+}

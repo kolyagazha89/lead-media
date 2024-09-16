@@ -1,0 +1,38 @@
+form{
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid gray;
+    border-radius: 15px;
+    justify-content: center;
+}
+.header{
+    font-size: 25px;
+}
+.data{
+    width: 200px;
+    margin: 10px 0px;
+    padding: 7px 15px;
+    font-size: 16px;
+    border:1px solid black;
+    border-radius: 15px;
+}
+.cont_query{
+    display: inline-flex;
+    justify-content: center;
+    gap:20px;
+}
+.query{
+    display: inline-flex;
+    width: 90px;
+    height: 25px;
+    font-size: 18px;
+    text-decoration: none;
+    color:black;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    justify-content: center;
+}

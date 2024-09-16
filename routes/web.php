@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CompanyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/company', [CompanyController::class,'index'])->name("index");
+Route::get('/company/add', [CompanyController::class,'create'])->name("createFormCompany");
+Route::post('/company/add', [CompanyController::class,'store'])->name("addCompany");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
