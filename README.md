@@ -1,3 +1,11 @@
 АПИ
 ![alt text](image.png)
-Метод для получения всех сотрудников
+Get-запрос для получения всех сотрудников (http://127.0.0.1:8000/api/customers)
+![alt text](image-1.png)
+Get-запрос для получения определенного сотрудника (http://127.0.0.1:8000/api/customers/3)
+![alt text](image-2.png)
+Post-запрос для добавления сотрудника (http://127.0.0.1:8000/api/customers/add)
+![alt text](image-3.png)
+Put-запрос для редактирования сотрудника (http://127.0.0.1:8000/api/customers/update/11)
+![alt text](image-4.png)
+Delete-запрос для удаления сотрудника (http://127.0.0.1:8000/api/customers/delete/11)
