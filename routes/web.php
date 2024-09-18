@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,13 @@ Route::post('/company/add', [CompanyController::class,'store'])->name("addCompan
 Route::get('/company/update/{company}', [CompanyController::class,'edit'])->name("editFormCompany");
 Route::post('/company/update/{company}', [CompanyController::class,'update'])->name("editCompany");
 Route::post('/company/delete/{company}', [CompanyController::class,'destroy'])->name("deleteCompany");
+
+Route::get('/customer', [CustomerController::class,'index'])->name("indexCustomer");
+Route::get('/customer/add/{company}', [CustomerController::class,'create'])->name("createFormCustomer");
+Route::post('/customer/add', [CustomerController::class,'store'])->name("addCustomer");
+Route::get('/customer/update/{customer}', [CustomerController::class,'edit'])->name("editFormCustomer");
+Route::post('/customer/update/{customer}', [CustomerController::class,'update'])->name("editCustomer");
+Route::post('/customer/delete/{customer}', [CustomerController::class,'destroy'])->name("deleteCustomer");
 
 Route::get('/dashboard', function () {
     return view('dashboard');

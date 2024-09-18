@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\company;
+use App\Models\customers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
 
@@ -20,7 +21,8 @@ class CompanyController extends Controller
     }
     public function show(Company $company) : View
     {
-        return view('company/companyShow', compact('company'));
+        $customers=Customers::where('company_id',$company->id)->latest()->paginate(10);
+        return view('company/companyShow', compact('company'),compact('customers'));
     }
     public function store(Request $req): RedirectResponse
     {
