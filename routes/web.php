@@ -25,7 +25,6 @@ Route::get('/company/update/{company}', [CompanyController::class,'edit'])->name
 Route::post('/company/update/{company}', [CompanyController::class,'update'])->name("editCompany");
 Route::post('/company/delete/{company}', [CompanyController::class,'destroy'])->name("deleteCompany");
 
-Route::get('/customer', [CustomerController::class,'index'])->name("indexCustomer");
 Route::get('/customer/add/{company}', [CustomerController::class,'create'])->name("createFormCustomer");
 Route::post('/customer/add', [CustomerController::class,'store'])->name("addCustomer");
 Route::get('/customer/update/{customer}', [CustomerController::class,'edit'])->name("editFormCustomer");
